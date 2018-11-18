@@ -1,11 +1,12 @@
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import json
 from pathlib import Path
 from datetime import datetime
 from hashlib import sha256
 application = Flask(__name__)
-
+CORS(application)
 @application.route("/")
 def hello():
     return "<h1 style='color:blue'>Hello There!</h1>"
