@@ -23,7 +23,7 @@ def log():
 	hashed = sha256(bytes(ser,'utf8')).hexdigest()
 	with open(f'/logs/{year}/{month}/{day}/{hour}/{hashed}.json', 'w') as fp:
 		fp.write(ser)
-	return f"<h1 style='color:blue'>OK</h1>"
+	return f"OK save data"
 
 if __name__ == "__main__":
     application.run(host='0.0.0.0')
